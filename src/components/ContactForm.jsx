@@ -5,7 +5,7 @@ const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 const validate = ({ name, email, message }) => {
   const errs = {};
-  if (!name.trim() || name.trim().length < 2 || !/^[A-Za-z]+$/.test(name.trim()))
+  if (!name.trim() || name.trim().length < 2 || !/^[A-Za-z\s]+$/.test(name.trim()))
     errs.name = 'Name must be at least 2 characters.';
   if (!email.trim() || !EMAIL_RE.test(email.trim()))
     errs.email = 'Please enter a valid email address.';
