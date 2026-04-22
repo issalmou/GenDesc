@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="DescriptoAI — AI-powered fashion product description generator. Upload a clothing photo and get a premium marketing description in seconds." />
+    <title>DescriptoAI – AI Fashion Description Generator</title>
+
+    <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: { 50:'#fff1f1', 100:'#ffe4e4', 200:'#ffcdcd', 300:'#ffa8a8', 400:'#ff6b6b', 500:'#ec4848', 600:'#d42828', 700:'#b11c1c', 800:'#921b1b', 900:'#781c1c' },
+              dark: '#1a1a2e',
+              mid:  '#3f444a',
+            },
+            fontFamily: {
+              display: ['Syne', 'sans-serif'],
+              body:    ['DM Sans', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+
+    <style>
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body { font-family: 'DM Sans', sans-serif; font-weight: 400; margin: 0; padding: 0; background: #fff; color: #3f444a; }
+      h1,h2,h3,h4,h5 { font-family: 'Syne', sans-serif; }
+
+      /* Preloader */
+      .preloader { position: fixed; inset: 0; background: #fff; z-index: 99999; display: flex; align-items: center; justify-content: center; }
+      .preloader-ring { width: 48px; height: 48px; border: 3px solid #fecaca; border-top-color: #ec4848; border-radius: 50%; animation: spin 0.8s linear infinite; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+
+      /* Scroll reveal */
+      .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+      .reveal.visible { opacity: 1; transform: none; }
+
+      /* Container */
+      .container { max-width: 1140px; margin: 0 auto; padding: 0 1.25rem; }
+
+      /* Gradient text */
+      .gradient-text { background: linear-gradient(135deg,#ec4848 0%,#ff8c69 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
+      /* Focus visible for accessibility */
+      :focus-visible { outline: 2px solid #ec4848; outline-offset: 2px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
