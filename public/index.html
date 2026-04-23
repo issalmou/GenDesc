@@ -54,6 +54,19 @@
 
       /* Focus visible for accessibility */
       :focus-visible { outline: 2px solid #ec4848; outline-offset: 2px; }
+
+      /* ── Scrollbar personnalisée ── */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #1a1a2e; }
+      ::-webkit-scrollbar-thumb {
+          background: linear-gradient(180deg, #ec4848 0%, #ff8c69 100%);
+          border-radius: 999px;
+          border: 2px solid #1a1a2e;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(180deg, #d42828 0%, #ec4848 100%);
+      }
+      * { scrollbar-width: thin; scrollbar-color: #ec4848 #1a1a2e; }
     </style>
   </head>
   <body>
